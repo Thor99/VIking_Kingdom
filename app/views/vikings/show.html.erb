@@ -1,15 +1,14 @@
-<h2 id="title_show">You entered in the kingdom of <b><%= @viking.name %></b> </h3>
+<h2>You entered in the kingdom of <b><%= @viking.name %></b> </h2>
 
-<p id="image_show">
+<p>
 	<%= image_tag @viking.image.url(:medium) %>
-
 </p>
 
-<p id="history_show">
+<p>
 	<b><%= @viking.history %></b>
 </p>
 
-<p id="links_show">
+<p>
 	<ul class="nav nav-pills nav-justified">
   		<li role="presentation"><%= link_to "Home of Vikings", root_path %></li>
   		<li role="presentation"><%= link_to "Edit the Viking", edit_viking_path %></li>
