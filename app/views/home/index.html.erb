@@ -1,0 +1,23 @@
+<ul class="nav nav-pills nav-justified" id="title_index">
+  <li role="presentation"><%= link_to "New Viking", new_viking_path %></li>
+</ul>
+
+<br> <br>
+
+<% if @vikings.count == 0 %>
+	<div class="page-header">
+  		<h1>No vikings till the moment <small>Odin is MAD!!!</small></h1>
+	</div>
+<% else %>
+	<div class="panel panel-default">
+		<% @vikings.each do |viking| %>
+  		<div class="panel-heading">
+    		<b><%= link_to viking.name, viking %></b>
+  		</div>
+  		<div class="panel-body">
+    		<%= image_tag viking.image.url(:thumb) %>
+  		</div>
+  		<br> 
+  		<% end %>
+	</div>
+<% end %>
