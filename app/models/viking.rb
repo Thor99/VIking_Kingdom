@@ -14,4 +14,12 @@ class Viking < ActiveRecord::Base
   		slug.blank? || name_changed?
 	end
 
+	def self.search(query)
+		if query.present?
+			where(['name LIKE :query', query: "%#{query}%"])
+		else
+			all
+		end
+	end
+
 end

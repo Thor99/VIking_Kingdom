@@ -1,24 +1,57 @@
-<% if @vikings.count == 0 %>
-    <div class="no_vikings_title"><b>No vikings till the moment, Odin is MAD!!!</b></div>
+<div class="input-group">
+  <span class="input-group-btn">
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+  </span>
+  <%= form_tag root_path, method: :get do %>
+    <%= text_field_tag :q, @search, class: 'form-control', placeholder: "Procure algum Viking..." %>
+  <% end %>
+</div>
+  
+<% if @search.present? %>
+  <% if @vikings_searched.count == 0 %>
+    <p class="no_vikings_founded">There is no viking founded with this name!</p>
+  <% else %>
+    <div class="home">
+      <% @vikings_searched.each do |viking| %>
+            
+        <div id="group_index">
+          <p>
+            <b><%= link_to viking.name, viking %></b>
+          </p>
+
+          <div class="image">
+            <img><%= image_tag viking.image.url(:thumb) %></img>
+          </div>
+        </div>
+        <br>
+      <% end %>
+    </div>
+  <% end %>
 <% else %>
 
-  
-  <div class="home">
-    
-      <% @vikings.each do |viking| %>
-        		
-          <div id="group_index">
-            <p>
-              <b><%= link_to viking.name, viking %></b>
-            </p>
+  <% if @vikings.count == 0 %>
+      <div class="no_vikings_title"><b>No vikings till the moment, Odin is MAD!!!</b></div>
+  <% else %>
 
-            <div class="image">
-              <img><%= image_tag viking.image.url(:thumb) %></img>
+    
+    <div class="home">
+      
+        <% @vikings.each do |viking| %>
+          		
+            <div id="group_index">
+              <p>
+                <b><%= link_to viking.name, viking %></b>
+              </p>
+
+              <div class="image">
+                <img><%= image_tag viking.image.url(:thumb) %></img>
+              </div>
             </div>
-          </div>
-        	<br>
-      <% end %>
-  </div>
+          	<br>
+        <% end %>
+    </div>
+
+  <% end %>
 
 <% end %>
 

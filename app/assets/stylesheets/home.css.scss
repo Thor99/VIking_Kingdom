@@ -49,3 +49,27 @@
 	text-align: center;
 	
 }
+
+::-webkit-input-placeholder {
+   font-weight: bold;
+}
+
+:-moz-placeholder {
+   font-weight: bold;
+}
+
+::-moz-placeholder {
+   font-weight: bold;
+}
+
+:-ms-input-placeholder {  
+   font-weight: bold;
+}
+
+.no_vikings_founded{
+	font-size: 25px;
+	color: #FF1919;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
