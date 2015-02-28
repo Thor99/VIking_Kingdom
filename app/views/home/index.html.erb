@@ -1,15 +1,13 @@
 <div class="input-group">
-  <span class="input-group-btn">
-    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-  </span>
   <%= form_tag root_path, method: :get do %>
-    <%= text_field_tag :q, @search, class: 'form-control', placeholder: "Procure algum Viking..." %>
+    <%= text_field_tag :q, @search, class: 'form-control', placeholder: "Search any Viking..." %>
+    <button type="submit" class="button_search"><span class="glyphicon glyphicon-search"></span></button>
   <% end %>
 </div>
-  
+
 <% if @search.present? %>
   <% if @vikings_searched.count == 0 %>
-    <p class="no_vikings_founded">There is no viking founded with this name!</p>
+    <p class="no_vikings_founded">There is no viking found with this name!</p>
   <% else %>
     <div class="home">
       <% @vikings_searched.each do |viking| %>
