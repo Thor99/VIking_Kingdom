@@ -4,16 +4,19 @@
 		<p class="group_form">
 			<%= f.label :name %> <br>
 			<%= f.text_field :name, class: 'form-control'%>
+			<%= error_tag(@viking, :name) %>
 		</p>
 
 		<p class="group_form">
 			<%= f.label :choose_an_image %> <br>
-			<%= f.file_field :image, class: 'form-control' %> 
+			<%= f.file_field :image, class: 'form-control' %>
+			<%= error_tag(@viking, :image) %> 
 		</p>
 
 		<p class="group_form">
 			<%= f.label :Viking_history %> <br>
 			<%= f.text_area :history, class: 'form-control' %>
+			<%= error_tag(@viking, :history) %>
 		</p>
 
 		<p class="group_form">

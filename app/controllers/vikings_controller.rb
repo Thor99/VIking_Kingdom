@@ -1,7 +1,7 @@
 class VikingsController < ApplicationController
 	
 	def show
-		@viking = Viking.find(params[:id])
+		@viking = Viking.friendly.find(params[:id])
 	end
 
 	def new
@@ -19,11 +19,11 @@ class VikingsController < ApplicationController
 	end
 
 	def edit
-		@viking = Viking.find(params[:id])
+		@viking = Viking.friendly.find(params[:id])
 	end
 
 	def update
-		@viking = Viking.find(params[:id])
+		@viking = Viking.friendly.find(params[:id])
 
 		if @viking.update(viking_params)
 			redirect_to @viking, notice: "LETS PRAY TO ODIN, YOUR VIKING HAS CHANGED!"
