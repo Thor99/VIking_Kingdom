@@ -1,0 +1,46 @@
+.home{
+	p{
+		text-align: center;
+		font-size: 25px;
+		margin-left: 6px;
+	}
+	p::after {
+		content: "\00d8";
+	}
+
+	.image{
+		text-align: center;
+		margin-left: 6px;
+
+		img{
+			margin-bottom: 5px;
+			border-radius: 50%;
+		}
+	}
+
+	#group_index{
+		background-image: linear-gradient(to bottom, #dcdcdc, #ababab); 
+		margin-top: 16px;
+	}
+}
+
+.link_index{
+	margin-top: 28px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	background-image: linear-gradient(to bottom, #dedede, #cdcdcd);
+	p{	
+		font-size: 21px;
+		text-align: center; 
+	}
+
+	p span {
+		color: #191919;
+	}
+}
+
+.no_vikings_title{
+	font-size: 25;
+}
+

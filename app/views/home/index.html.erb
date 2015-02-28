@@ -1,25 +1,32 @@
-<ul class="nav nav-pills nav-justified" id="title_index">
-  <li role="presentation"><%= link_to "New Viking", new_viking_path %></li>
-</ul>
-
-<br> <br>
-
 <% if @vikings.count == 0 %>
-
-  <h1>No vikings till the moment <small>Odin is MAD!!!</small></h1>
-
+    <div class="no_vikings_title"><b>No vikings till the moment, Odin is MAD!!!</b></div>
 <% else %>
-	
-	<% @vikings.each do |viking| %>
-  		
-    	<p>
-        <b><%= link_to viking.name, viking %></b>
-      </p>
 
-      <p>
-        <%= image_tag viking.image.url(:thumb) %>
-      </p>
-  		<br>
-  <% end %>
+  
+  <div class="home">
+    
+      <% @vikings.each do |viking| %>
+        		
+          <div id="group_index">
+            <p>
+              <b><%= link_to viking.name, viking %></b>
+            </p>
+
+            <div class="image">
+              <img><%= image_tag viking.image.url(:thumb) %></img>
+            </div>
+          </div>
+        	<br>
+      <% end %>
+  </div>
 
 <% end %>
+
+<div class="link_index">
+  <p><span>Create a<span> <%= link_to "New Viking", new_viking_path %></p>
+</div>
+
+
+
+
+

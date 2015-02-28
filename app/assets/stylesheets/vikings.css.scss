@@ -1,0 +1,56 @@
+.title{
+	
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	background-image: linear-gradient(to bottom, #33CCFF, #29A3CC);
+	.title_show{
+		
+		text-align: center;
+		font-size: 30px;
+	}
+}
+
+.body_show{
+	.image_viking{
+		margin-top: 40px;
+		text-align: center;
+
+		img{
+			border-radius: 40%;
+		}
+	}
+
+	.history_show{
+		margin-top: 28px;
+		font-size: 26px;
+		text-align: center;
+	}
+
+}
+
+.title_edit_new{
+	margin-bottom: 39px;
+	text-align: center;
+	font-size: 27px;
+}
+
+.formin{
+	text-align: center;
+	font-size: 23px;
+
+	.group_form{
+		margin-bottom: 25px;
+	}
+
+}
+
+.links_show_new_edit{
+			margin-top: 28px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			background-image: linear-gradient(to right, #dcdcdc, #98a9b0);
+			font-size: 20px;
+			text-align: center;
+	}
