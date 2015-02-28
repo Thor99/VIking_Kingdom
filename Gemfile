@@ -24,6 +24,10 @@ gem 'bootstrap-sass', '~> 3.3.3'
 
 gem "paperclip", "~> 4.2"
 
+gem 'kaminari'
+
+gem 'bootstrap-kaminari-views'
+
 group :development, :test do
   
   gem 'byebug'

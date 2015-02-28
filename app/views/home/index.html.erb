@@ -26,6 +26,10 @@
   <p><span>Create a<span> <%= link_to "New Viking", new_viking_path %></p>
 </div>
 
+<div class="pagination_position">
+  <%= paginate @vikings, :theme => 'twitter-bootstrap-3' %>
+</div>
+
 
 
 
